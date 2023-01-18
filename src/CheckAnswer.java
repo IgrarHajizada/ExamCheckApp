@@ -34,7 +34,7 @@ public class CheckAnswer {
 
         int number = 1;
         for (int i = 0; i < length; i++) {
-            boolean b = answer.get(i).equals(arr.get(i));
+            boolean b = answer.get(i).equals(arr.get(i).toLowerCase());
 
             if (b == true) {
                 System.out.println(number + ") " + true + " +");
