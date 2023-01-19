@@ -13,6 +13,8 @@ public class CheckAnswer {
         int length = sc.nextInt();
         ArrayList<String> answer = new ArrayList<>();
 
+
+
         for (int i = 1; i <= length; i++) {
             System.out.print(i + ") ");
             answer.add(sc.next());
