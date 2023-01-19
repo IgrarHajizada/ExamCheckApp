@@ -1,4 +1,3 @@
-
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -8,20 +7,36 @@ public class CheckAnswer {
 
         String fileName = "C:\\Users\\HP\\Desktop\\TrueAnswer.txt";
         Scanner sc = new Scanner(System.in);
-        System.out.println("Until what time will you work?");
-        System.out.print("Answer: ");
+        System.out.print("First question number: ");
+        int firstNumber = sc.nextInt();
+        System.out.print("Last question number: ");
         int length = sc.nextInt();
         ArrayList<String> answer = new ArrayList<>();
 
 
 
-        for (int i = 1; i <= length; i++) {
-            System.out.print(i + ") ");
-            answer.add(sc.next());
+        // Adding answers
+        if (firstNumber == 1) {
+            for (int i = 1; i <= length; i++) {
+                System.out.print(i + ") ");
+                answer.add(sc.next());
+            }
+        } else {
+            for (int i = 1; i <= firstNumber; i++) {
+                System.out.println(i + ") ");
+                answer.add("-");
+            }
+            for (int i = firstNumber + 1; i <= length; i++) {
+                System.out.print(i + ") ");
+                answer.add(sc.next());
+            }
         }
         System.out.println("\n1: " + answer);
 
 
+
+
+        // Reading from file
         ArrayList<String> arr = new ArrayList<>();
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             String line;
@@ -34,11 +49,15 @@ public class CheckAnswer {
 
         System.out.println();
 
+
+
+
+        // Checking exam
         int number = 1;
         for (int i = 0; i < length; i++) {
             boolean b = answer.get(i).equals(arr.get(i).toLowerCase());
 
-            if (b == true) {
+            if (b) {
                 System.out.println(number + ") " + true + " +");
 
             } else {
