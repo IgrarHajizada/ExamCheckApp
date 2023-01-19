@@ -48,6 +48,7 @@ public class CheckAnswer {
         }
 
         System.out.println();
+        System.out.println("RESULT:");
 
 
 
