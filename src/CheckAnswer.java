@@ -22,11 +22,11 @@ public class CheckAnswer {
                 answer.add(sc.next());
             }
         } else {
-            for (int i = 1; i <= firstNumber; i++) {
+            for (int i = 1; i <= firstNumber-1; i++) {
                 System.out.println(i + ") ");
                 answer.add("-");
             }
-            for (int i = firstNumber + 1; i <= length; i++) {
+            for (int i = firstNumber; i <= length; i++) {
                 System.out.print(i + ") ");
                 answer.add(sc.next());
             }
