@@ -1,11 +1,16 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class RandomNumber {
     public static void main(String[] args) {
-        Random r = new Random();
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+        System.out.print("Length: ");
+        int length = scanner.nextInt();
 
-        for (int i = 1; i <= 50; i++) {
-            System.out.println(i + ") " + r.nextInt(1, 300));
+
+        for (int i = 1; i <= length; i++) {
+            System.out.println(i + ") " + random.nextInt(1, 300));
         }
     }
 }
