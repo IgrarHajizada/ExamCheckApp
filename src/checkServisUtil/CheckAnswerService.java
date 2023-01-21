@@ -1,4 +1,4 @@
-package servisUtil;
+package checkServisUtil;
 
 import java.util.ArrayList;
 

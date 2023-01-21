@@ -1,7 +1,7 @@
-import servisUtil.AddAnswerService;
-import servisUtil.CheckAnswerService;
-import servisUtil.PrintTrueAnswerService;
-import servisUtil.ShowMenuService;
+import checkServisUtil.AddAnswerService;
+import checkServisUtil.CheckAnswerService;
+import checkServisUtil.PrintTrueAnswerService;
+import checkServisUtil.ShowMenuService;
 
 import java.io.*;
 import java.util.ArrayList;
