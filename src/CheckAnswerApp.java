@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class CheckAnswerApp {
     public static void main(String[] args) throws IOException {
 
-        String fileName = "lib/TrueAnswer.txt";
+        String fileName = "lib/PsychologyTrueAnswer.txt";
 
         ShowMenuService menuUtil = new ShowMenuService();
         AddAnswerService addAnswerService = new AddAnswerService();
